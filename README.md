@@ -2,7 +2,6 @@ README
 ------
 
 Author: Matthew Parangot
-Contact: mjparangot@gmail.com
 
 
 ---------
