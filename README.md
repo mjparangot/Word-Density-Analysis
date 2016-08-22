@@ -68,7 +68,6 @@ tree.add({"safeguard", "privacy", "liberty"});
 	  
 And the tree looks like this:
 	  
------------------------------------------------------
 ("safeguard", 4) --> ("pretty", 1)
 	  	 --> ("privacy" 2) --> ("liberty", 1)
 	  
@@ -77,15 +76,13 @@ And the tree looks like this:
 ("privacy" 2)	 --> ("liberty", 1)
 	  
 ("liberty", 1)
------------------------------------------------------
 	  
 In parentheses are NODEs with structure (value, size). The arrows represent all children of the NODE
 
 The left-most nodes represent the top level of the TREE
 	  
 If you added these new keywords {"safeguard pretty liberty"} the TREE would look like this:
-	  
-------------------------------------------------------
+
 ("safeguard", 5) --> ("pretty", 2) --> ("liberty", 1)
 		 --> ("privacy", 2) --> ("liberty", 1)
 	  
@@ -94,7 +91,6 @@ If you added these new keywords {"safeguard pretty liberty"} the TREE would look
 ("privacy" 2)	 --> ("liberty", 1)
 	  
 ("liberty", 2)
-------------------------------------------------------
 
 Note how the sizes of some of the NODEs increased because another instance of it was added.
 	  
@@ -143,7 +139,6 @@ STOPWORD @ "again." -> tree.add({"free", "man"})
 
 And the tree would look like this:
 
---------------------------------
 ("Edward", 1) --> ("Snowden", 1)
 
 ("Snowden", 1)
@@ -155,7 +150,6 @@ And the tree would look like this:
 ("free", 1)   --> ("man", 1)
 
 ("man", 1)
---------------------------------
 
 The top level of the tree contains the keywords 
 
