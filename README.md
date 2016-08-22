@@ -12,15 +12,15 @@ The general algorithm that I followed for keyword extraction is as follows:
 
 [DOCUMENT] -> (Candidates) -> (Properties) -> (Scoring) -> [KEYWORDS]
 
-DOCUMENT: The document to be parsed, specified by a URL
+- Document: The document to be parsed, specified by a URL
 
-Candidates: These are found by parsing through each word in the text and breaking at stopwords and punctuation. Stopwords are filler words that don't add to the context of the sentence and can be ignored. The candidates are then normalized.
+- Candidates: These are found by parsing through each word in the text and breaking at stopwords and punctuation. Stopwords are filler words that don't add to the context of the sentence and can be ignored. The candidates are then normalized.
 
-Properties: These are properties of the candidates that can be calculated. Examples include frequency of occurence, position in document, phrase length, etc. For this I simply used FREQUENCY OF OCCURENCE as the main property.
+- Properties: These are properties of the candidates that can be calculated. Examples include frequency of occurence, position in document, phrase length, etc. For this I simply used FREQUENCY OF OCCURENCE as the main property.
 
-Scoring: This is a heueristic formula that combines the most powerful properties. My scoring for each candidate is equal to the number of occurences.
+- Scoring: This is a heueristic formula that combines the most powerful properties. My scoring for each candidate is equal to the number of occurences.
 
-KEYWORDS: These represent all keywords (both single-word and multi-word) that have been found and scored.
+- Keywords: These represent all keywords (both single-word and multi-word) that have been found and scored.
 
 See here for visualization of this algorithm:
 
@@ -31,16 +31,16 @@ http://airpair-blog.s3.amazonaws.com/wp-content/uploads/2014/09/image00.png
 Node and Tree Structures
 ------------------------
 
-For this assignment I decided to create my own data structure built upon the HashMap data structure.
+For this I decided to create my own data structure built upon the HashMap data structure.
 
 In my implementation I made a more specific version called WordTree and WordNode to be used specifically for storing keywords (Strings) as opposed to a generic object. However the general structure is independent of whatever datatype needs to be scored. For this reason they can just be called NODE and TREE
 
 
 A NODE has three components:
 
-value - the ojbect being stored
-size - the heuristic value associated with the NODE 
-children - A map of all children of the NODE 
+- Value: the ojbect being stored
+- Size: the heuristic value associated with the NODE 
+- Children: A map of all children of the NODE 
 
 Just like how each node in a linked list points to the next one, each NODE here points to each of its children using the map. The key-value pairing for the map is as follows:
 
